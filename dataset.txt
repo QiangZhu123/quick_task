@@ -1,0 +1,32 @@
+使用labelimg来制作xml格式的数据集
+
+dataset
+  -images
+    s0001.png
+    s0002.png
+    name.png
+  -annotations
+    s0001.xml
+    s0002.xml
+    name.xml
+修改函数
+生成data_infos
+load_annotations(self, ann_file)
+解码一个样本
+get_ann_info(self, idx)
+    
+使用labelimg来制作json格式的数据集，
+[
+  {
+    "image": "145053828_e0e748717c_b.jpg", 
+    "annotations": [
+               {
+               "label": "\u4e94", 
+               "coordinates": {"x": 587.0, "y": 269.5, "width": 238.0, "height": 179.0}
+               }, 
+               {"label": "\u4e94",
+               "coordinates": {"x": 351.5, "y": 325.0, "width": 167.0, "height": 208.0}
+                }
+               ]
+  }
+]
